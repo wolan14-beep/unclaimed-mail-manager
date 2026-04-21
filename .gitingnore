@@ -178,3 +178,5 @@ pyrightconfig.json
 refg/
 
 NOTES.md
+
+database/database.db
