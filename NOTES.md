@@ -15,4 +15,29 @@ Para isso, precisa primeiro recuperar os arquivos do repositório na nuvem com:
     `git pull origin main --allow-unrelated-histories`
 Será aberta uma janela no vscode. Depois é só fechar e tentar novamente o push. Assim os arquivos de nuvem serão os mesmos que estão no diretório local e ao dar o push, não terá divergências.
 
+---------------------------------------
+## Tabelas para criar:
 
+- Tabela `users`
+  
+|Campo|Tipo|Observação|
+|-----|----|----------|
+|`registraion`|Text| Chave primária e login (matrícula)|
+|`name`|Text|Nome do funcionário|
+|`password`|Text|Hash do CPF ou data de nascimento|
+|`profile`|Text|`admin` ou `attendant`|
+
+<br>
+
+- Tabela `parcels`
+
+|Campo|Tipo|Observação|
+|----|----|----|
+|`order_number`|Integer|Chave primária, gerado automaticamente|
+|`tracking`|Text|Número de Rastreio S10 Standard|
+|`sender`|Text|Nome do Remetente|
+|`entry_date`|Date|Gerado automaticamente (data atual)|
+|`exit_date`|Date|Calculado (entrada + 90)|
+|`status`|Text|Padrão: `waiting`|
+|`changed_by`|Text|login de quem fez a última alteração|
+|`change_date`|Date|Data da última alteração|
