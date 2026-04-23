@@ -12,8 +12,12 @@ To https://github.com/wolan14-beep/unclaimed-mail-manager.git`)
 Se houver divergência entre os arquivos no GitHub com os commitados no pc, vai gerar um erro ao tentar o push.
 
 Para isso, precisa primeiro recuperar os arquivos do repositório na nuvem com:
-    `git pull origin main --allow-unrelated-histories`
+`git pull origin main --allow-unrelated-histories`
 Será aberta uma janela no vscode. Depois é só fechar e tentar novamente o push. Assim os arquivos de nuvem serão os mesmos que estão no diretório local e ao dar o push, não terá divergências.
+
+### Parando rastreamento de itens:
+Para parar o rastreamento de algum item, como no caso onde eu criei o banco de dados vazio para poder exibir no repositório mas manter para o projeto real,  se usa o comando remover:
+`git rm -r --cached "diretorio/arquivo"`
 
 ---------------------------------------
 ## Tabelas para criar:
@@ -22,7 +26,7 @@ Será aberta uma janela no vscode. Depois é só fechar e tentar novamente o pus
   
 |Campo|Tipo|Observação|
 |-----|----|----------|
-|`registraion`|Text| Chave primária e login (matrícula)|
+|`registration`|Text| Chave primária e login (matrícula)|
 |`name`|Text|Nome do funcionário|
 |`password`|Text|Hash do CPF ou data de nascimento|
 |`profile`|Text|`admin` ou `attendant`|
