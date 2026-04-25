@@ -14,7 +14,7 @@ def create_tables(connected):
                     registration INTEGER PRIMARY KEY,
                     name TEXT NOT NULL,
                     cpf TEXT UNIQUE NOT NULL,
-                    profile TEXT NOT NULL
+                    profile TEXT NOT NULL CHECK (profile IN ('admin', 'attendant'))
                       )
                     """)
     

@@ -45,3 +45,23 @@ Para parar o rastreamento de algum item, como no caso onde eu criei o banco de d
 |`status`|Text|Padrão: `waiting`|
 |`changed_by`|Text|login de quem fez a última alteração|
 |`change_date`|Date|Data da última alteração|
+
+## Tuplas nas funções de manipulação do Banco de Dados
+
+O SQL espera receber os valor de acordo com a ordem de escrita. E o elemento que garante listagem ordenada no Python são as __tuplas__
+
+- Nas funções de cadastro foram usadas tuplas para definir a ordem dos valores que serão recebidos pelas instruções do SQLite.
+  - exemplo:
+    `cursor.execute('UPDATE users SET name = ?, cpf = ?, profile = ? WHERE registration = ?', (name, cpf, profile, registration))`
+
+A tupla `(name, cpf, profile, registration)` nesse exemplo recebeu 4 valores. Todos separados por vírgula e está na ordem de acordo com a expressão SQL.
+
+##### Tuplas de um único valor:
+Quando houver apenas um valor dentro da tupla, inserir uma vírgula no final do valor declarado:
+- Exemplo:
+  - `(connectio,)`
+
+
+
+
+
