@@ -7,8 +7,8 @@ create_tables(connection)
 print("Banco gerado com SUCESSO!")
 
 
-# ok, msg = create_user(connection, 89887784, "Eduardo Pereira Guedes", "377039808", "admin")
-# print(ok, msg)
+ok, msg = create_user(connection, 89887784, "Eduardo Pereira Guedes", "377039808", "admin")
+print(ok, msg)
 
 # ok, msg = delete_user(connection, 89887784)
 # print(ok, msg)
